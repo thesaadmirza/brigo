@@ -13,7 +13,7 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-
+ALLOWED_HOSTS = ['*']
 DATABASES = {"default": {"ENGINE": "django.db.backends.sqlite3", "NAME": "test.sqlite"}}
 
 # Local time zone for this installation. Choices can be found here:
