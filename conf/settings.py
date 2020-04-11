@@ -61,12 +61,7 @@ MEDIA_URL = ""
 
 
 # List of finder classes that know how to find static files in
-# various locations.
-STATICFILES_FINDERS = (
-    "django.contrib.staticfiles.finders.FileSystemFinder",
-    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
-)
+
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = "7@m$nx@q%-$la^fy_(-rhxtvoxk118hrprg=q86f(@k*6^^vf8"
@@ -173,5 +168,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
