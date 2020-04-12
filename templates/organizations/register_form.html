@@ -1,0 +1,8 @@
+{% extends "organizations_base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form action="." method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="genric-btn info" value="submit">
+</form>
+{% endblock %}

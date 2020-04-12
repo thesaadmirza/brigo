@@ -162,7 +162,13 @@ LOGGING = {
 }
 # INVITATION_BACKEND = 'organizations.backends.MyInvitationBackend'
 # REGISTRATION_BACKEND = 'organizations.backends.MyRegistrationBackend'
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sarmad1305@gmail.com'
+EMAIL_HOST_PASSWORD = 'hzdxyvyhuueceyon'
+DEFAULT_FROM_EMAIL = 'Deximind Team <noreply@younii.com'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'

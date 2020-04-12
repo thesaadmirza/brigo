@@ -1,0 +1,8 @@
+{% extends "organizations_base.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% trans "Would you like to join?" %}
+<form action="." method="POST">{% csrf_token %}
+	<button class="genric-btn info" type="submit">{% trans "Join" %}</button>
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "organizations_base.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block content %}
+{% if profile %}
+<h1>{% trans "Update your profile" %}</h1>
+<br>
+{% else %}
+<h1> {{ organization_user }} @ {{ organization }}</h1>
+<br>
+{% endif %}
+{% if user == organization_user.user %}{% trans "This is you" %}!{% endif %}
+<form action="." method="post">{% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="genric-btn info" value="submit">
+</form>
+
+{% endblock %}

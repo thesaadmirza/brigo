@@ -1,0 +1,17 @@
+{% extends "organizations_base.html" %}
+{% load i18n %}
+{% block content %}
+<h1> {{ organization_user }} @ {{ organization }}</h1>
+<br>
+{% if user == organization_user.user %}{% trans "This is you" %}!{% endif %}
+
+<br/>
+<h3><b>{% trans "Name" %}:</b>  {{ organization_user.full_name }}</h3>
+<h3><b>{% trans "Email" %}:</b>  {{ organization_user.user.email }}</h3>
+
+<br/>
+<a class="genric-btn info mb-3" href="{% url "organization_user_edit" organization.pk organization_user.user.pk %}">{% trans "Edit" %}</a>
+<br/>
+<a class="genric-btn danger" href="{% url "organization_user_delete" organization.pk organization_user.user.pk %}">{% trans "Delete" %}</a>
+
+{% endblock %}
